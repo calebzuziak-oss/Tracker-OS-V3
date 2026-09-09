@@ -1,0 +1,9 @@
+{
+  "name": "Tip Tracker V2",
+  "short_name": "Tips V2",
+  "start_url": "/src/index.html",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
