@@ -3,13 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <title>Tip Tracker V2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b1220" />
-  <meta name="description" content="Modern server tip ledger: log shifts, see weekly trends, shift-type analytics, and export CSV." />
-  <meta property="og:title" content="Tip Tracker V2" />
-  <meta property="og:description" content="Modern server tip ledger: log shifts, see weekly trends, shift-type analytics, and export CSV." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og-placeholder.png" />
+  <meta name="description" content="Modern server tip ledger: log shifts, see weekly trends, and export CSV." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +22,8 @@
         <p class="subtitle">Every shift, itemized.</p>
       </div>
       <div class="header-actions">
-        <button class="btn btn-ghost" id="themeToggle" aria-label="Toggle theme">Theme</button>
-        <button class="btn btn-ghost" id="exportBtn" aria-label="Export CSV">Export CSV</button>
+        <button class="btn btn-ghost" id="themeToggle">Theme</button>
+        <button class="btn btn-ghost" id="exportBtn">Export CSV</button>
       </div>
     </header>
 
@@ -53,7 +49,9 @@
 
   <script type="module" src="app.js"></script>
   <script>
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(()=>{});
+    }
   </script>
 </body>
 </html>
