@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tip Tracker V2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Modern server tip ledger: log shifts, see weekly trends, shift-type analytics, and export CSV." />
+  <meta property="og:title" content="Tip Tracker V2" />
+  <meta property="og:description" content="Modern server tip ledger: log shifts, see weekly trends, shift-type analytics, and export CSV." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-placeholder.png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="eyebrow">Server’s Ledger</div>
+        <h1 class="title">Tip Tracker <span class="badge">V2</span></h1>
+        <p class="subtitle">Every shift, itemized.</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-ghost" id="themeToggle" aria-label="Toggle theme">Theme</button>
+        <button class="btn btn-ghost" id="exportBtn" aria-label="Export CSV">Export CSV</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="stats" id="stats"></section>
+      <section class="receipt" id="receipt"></section>
+      <section class="charts" id="charts"></section>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="openFormBtn">Ring in a shift</button>
+      </div>
+
+      <div class="form-card hidden" id="formCard"></div>
+      <div class="history" id="history"></div>
+    </main>
+
+    <footer class="footer">
+      <button class="link-btn" id="clearAllBtn">Clear all data</button>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">Action complete</div>
+
+  <script type="module" src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
+  </script>
+</body>
+</html>
